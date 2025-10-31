@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/Backend/approval-service/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Backend/approval-service/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/Backend/approval-service/src/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Backend/auth-service/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Backend/auth-service/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/Backend/auth-service/src/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Backend/document-service/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Backend/document-service/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/Backend/document-service/src/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Backend/gateway-service/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Backend/gateway-service/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/Backend/gateway-service/src/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Backend/shared-library/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Backend/shared-library/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/Backend/shared-library/src/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Backend/user-service/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Backend/user-service/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/Backend/user-service/src/test" isTestSource="true" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

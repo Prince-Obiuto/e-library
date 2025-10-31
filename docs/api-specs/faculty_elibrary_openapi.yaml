@@ -1,0 +1,216 @@
+openapi: 3.0.3
+info:
+  title: Faculty E-Library API
+  version: 1.0.0
+  description: >
+    OpenAPI specification for the Faculty E-Library backend. 
+    This API supports authentication, user management, document management, and approval workflows.
+
+servers:
+  - url: http://localhost:8080
+    description: Local development server (faculty LAN)
+
+paths:
+
+  /api/auth/register:
+    post:
+      summary: Register a new user with school email
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                password:
+                  type: string
+                role:
+                  type: string
+                graduationYear:
+                  type: integer
+      responses:
+        '201':
+          description: User registered successfully
+
+  /api/auth/login:
+    post:
+      summary: Authenticate user and return JWT token
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                password:
+                  type: string
+      responses:
+        '200':
+          description: JWT token issued
+
+  /api/auth/verify:
+    get:
+      summary: Verify if a user’s token is valid
+      parameters:
+        - name: token
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Valid token
+
+  /api/auth/cleanup-expired:
+    delete:
+      summary: Delete expired student accounts after graduation year
+      responses:
+        '204':
+          description: Expired accounts deleted
+
+  /api/users:
+    get:
+      summary: List all registered users
+      responses:
+        '200':
+          description: List of users
+
+  /api/users/{id}/role:
+    put:
+      summary: Update a user’s role
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                newRole:
+                  type: string
+      responses:
+        '200':
+          description: Role updated
+
+  /api/users/{id}:
+    delete:
+      summary: Delete a specific user account
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: User deleted
+
+  /api/docs/upload:
+    post:
+      summary: Upload a new document for approval
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                description:
+                  type: string
+                file:
+                  type: string
+                  format: binary
+                category:
+                  type: string
+      responses:
+        '201':
+          description: Document uploaded and pending approval
+
+  /api/docs:
+    get:
+      summary: Fetch all approved documents
+      parameters:
+        - name: category
+          in: query
+          schema:
+            type: string
+        - name: keyword
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: List of approved documents
+
+  /api/docs/{id}:
+    get:
+      summary: Retrieve a specific document by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Document retrieved
+
+  /api/approvals/pending:
+    get:
+      summary: View all pending document uploads awaiting approval
+      responses:
+        '200':
+          description: List of pending uploads
+
+  /api/approvals/{docId}/approve:
+    put:
+      summary: Approve a specific document for publishing
+      parameters:
+        - name: docId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Document approved
+
+  /api/approvals/{docId}/reject:
+    put:
+      summary: Reject a specific document upload
+      parameters:
+        - name: docId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                reason:
+                  type: string
+      responses:
+        '200':
+          description: Document rejected
+
+  /api/status:
+    get:
+      summary: Check the operational status of backend services
+      responses:
+        '200':
+          description: Service health report
