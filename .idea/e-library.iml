@@ -21,6 +21,18 @@
       <sourceFolder url="file://$MODULE_DIR$/Backend/user-service/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Backend/user-service/src/main/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/Backend/user-service/src/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Backend/config-service/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Backend/config-service/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/Backend/config-service/src/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Backend/notification-service/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Backend/notification-service/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/Backend/notification-service/src/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Backend/service-discovery/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Backend/service-discovery/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/Backend/service-discovery/src/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Backend/user-service/user-service/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Backend/user-service/user-service/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/Backend/user-service/user-service/src/test" isTestSource="true" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
