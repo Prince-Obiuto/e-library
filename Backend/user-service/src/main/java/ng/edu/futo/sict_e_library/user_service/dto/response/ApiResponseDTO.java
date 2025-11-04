@@ -18,7 +18,7 @@ public class ApiResponseDTO<T> {
     private T data;
     private LocalDateTime timeStamp;
 
-    public static <T> ApiResponseDTO<T> success(String message T data) {
+    public static <T> ApiResponseDTO<T> success(String message, T data) {
         return ApiResponseDTO.<T>builder()
                 .success(true)
                 .message(message)

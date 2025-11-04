@@ -5,6 +5,7 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import lombok.*;
+import ng.edu.futo.sict_e_library.user_service.enums.AccountType;
 import ng.edu.futo.sict_e_library.user_service.enums.UserRole;
 
 @Data
