@@ -1,6 +1,5 @@
 package ng.edu.futo.sict_e_library.user_service.service.impl;
 
-import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import ng.edu.futo.sict_e_library.user_service.dto.request.ProfileUpdateRequestDTO;
@@ -18,6 +17,7 @@ import ng.edu.futo.sict_e_library.user_service.service.UserService;
 import ng.edu.futo.sict_e_library.user_service.util.EmailValidator;
 import ng.edu.futo.sict_e_library.user_service.util.ValidationUtil;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.time.Year;
@@ -276,5 +276,4 @@ public class UserServiceImpl implements UserService {
                 .lastLoginAt(user.getLastLoginAt())
                 .build();
     }
-}
 }

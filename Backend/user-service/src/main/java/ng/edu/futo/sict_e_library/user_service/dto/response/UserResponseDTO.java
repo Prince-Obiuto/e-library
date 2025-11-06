@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import ng.edu.futo.sict_e_library.user_service.enums.AccountType;
 import ng.edu.futo.sict_e_library.user_service.enums.UserRole;
 import ng.edu.futo.sict_e_library.user_service.enums.UserStatus;
 
