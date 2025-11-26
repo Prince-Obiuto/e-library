@@ -39,7 +39,7 @@ public interface UserRepository extends JpaRepository<User, String> {
     @Query("SELECT COUNT(u) FROM User u WHERE u.status = :status")
     Long countByStatus(@Param("status") UserStatus status);
 
-    @Query("SELECT COUNT(u) FROM User u WHERE u.department = :department")
+    @Query("SELECT u FROM User u WHERE u.department = :department")
     List<User> findByDepartment(@Param("department") String department);
 
     @Query("SELECT u FROM User u WHERE LOWER(u.email) LIKE LOWER(CONCAT('%', :keyword, '%')) " +

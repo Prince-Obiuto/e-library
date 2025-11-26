@@ -94,7 +94,7 @@ public class StudentAccountExpiryScheduler {
         for (User student : studentsNearingExpiry) {
             log.info("Sending expiry warning to student: {} (Graduation Year: {})", student.getEmail(), student.getGradYear());
 
-            student.setExpiryWarningMailSentAt(LocalDateTime.now());
+            student.setExpiryWarningEmailSentAt(LocalDateTime.now());
             userRepository.save(student);
 
             //TODO: send warning notification via kafka to student about upcoming account expiry by notification service

@@ -1,5 +1,8 @@
 package ng.edu.futo.sict_e_library.user_service.enums;
 
+import lombok.Getter;
+
+@Getter
 public enum UserStatus {
     ACTIVE("Account is active and can access the system"),
     INACTIVE("Account is temporarily inactive"),
@@ -12,7 +15,4 @@ public enum UserStatus {
         this.description = description;
     }
 
-    public String getDescription() {
-        return description;
-    }
 }

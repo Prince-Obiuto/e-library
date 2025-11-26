@@ -1,5 +1,8 @@
 package ng.edu.futo.sict_e_library.user_service.enums;
 
+import lombok.Getter;
+
+@Getter
 public enum UserRole {
     ADMIN_STAFF("Admin Staff - Full system access"),
     ACADEMIC_STAFF("Academic Staff - Upload, access and manage academic materials"),
@@ -12,7 +15,4 @@ public enum UserRole {
         this.description = description;
     }
 
-    public String getDescription() {
-        return description;
-    }
 }

@@ -78,7 +78,7 @@ public class User {
 
     private LocalDateTime lastLoginAt;
 
-    private LocalDateTime expiryWarningMailSentAt;
+    private LocalDateTime expiryWarningEmailSentAt;
 
     @PrePersist
     protected void onCreate() {

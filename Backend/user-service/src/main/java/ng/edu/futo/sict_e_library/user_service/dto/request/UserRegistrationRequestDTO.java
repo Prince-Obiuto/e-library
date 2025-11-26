@@ -10,7 +10,7 @@ import ng.edu.futo.sict_e_library.user_service.enums.UserRole;
 
 @Data
 @NoArgsConstructor
-@RequiredArgsConstructor
+@AllArgsConstructor
 @Builder
 public class UserRegistrationRequestDTO {
 
