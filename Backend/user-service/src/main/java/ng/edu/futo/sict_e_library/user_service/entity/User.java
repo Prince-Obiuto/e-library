@@ -9,6 +9,7 @@ import ng.edu.futo.sict_e_library.user_service.enums.AccountType;
 import ng.edu.futo.sict_e_library.user_service.enums.UserRole;
 import ng.edu.futo.sict_e_library.user_service.enums.UserStatus;
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
 
@@ -74,6 +75,8 @@ public class User {
     @Column(nullable = false, updatable = false)
     private LocalDateTime createdAt;
 
+    @UpdateTimestamp
+    @Column(nullable = false)
     private LocalDateTime updatedAt;
 
     private LocalDateTime lastLoginAt;
